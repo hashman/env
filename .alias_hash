@@ -19,6 +19,8 @@ alias get_cqd_bar='wget https://gist.githubusercontent.com/CQD/eac9e8619a72aa56e
 
 # git alias
 
+current_branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+
 diff_with_filename() {
     current_branch=`git rev-parse --abbrev-ref HEAD`
     git diff $1 $current_branch --name-only
